@@ -101,6 +101,14 @@ const TransactionsTable = ({
     }
   }
 
+  const sortingOptions = [
+    { value: "", label: "No Sort" },
+    { value: "dateAsc", label: "Sort by Date : (Ascending)" },
+    { value: "dateDesc", label: "Sort by Date : (Descending)" },
+    { value: "amountAsc", label: "Sort by Amount : (Ascending)" },
+    { value: "amountDesc", label: "Sort by Amount : (Descending)" },
+  ];
+
   return (
     <div
       style={{
@@ -134,7 +142,7 @@ const TransactionsTable = ({
       <div className="my-table">
         <h2>My Transactions</h2>
         <div className="table-wrapper">
-          <Radio.Group
+          {/* <Radio.Group
             className="input-radio"
             onChange={(e) => setSortKey(e.target.value)}
             value={sortKey}
@@ -152,9 +160,23 @@ const TransactionsTable = ({
             <Radio.Button value="amountDesc">
               Sort by Amount (Descending)
             </Radio.Button>
-          </Radio.Group>
+          </Radio.Group> */}
+
+          <Select
+            className="select-input"
+            onChange={(value) => setSortKey(value)}
+            value={sortKey}
+            placeholder="Sort by"
+          >
+            {sortingOptions.map((option) => (
+              <Option key={option.value} value={option.value}>
+                {option.label}
+              </Option>
+            ))}
+          </Select>
 
           <div
+          className="btn-wrapper-new"
             style={{
               display: "flex",
               justifyContent: "center",
@@ -162,10 +184,10 @@ const TransactionsTable = ({
               width: "400px",
             }}
           >
-            <button className="btn" onClick={exportCSV}>
+            <button className="btn custom-btn-new-1" onClick={exportCSV}>
               Export to CSV
             </button>
-            <label htmlFor="file-csv" className="btn btn-blue">
+            <label htmlFor="file-csv" className="btn btn-blue custom-btn-new-2">
               Import from CSV
             </label>
             <input
@@ -179,7 +201,11 @@ const TransactionsTable = ({
           </div>
         </div>
 
-        <Table dataSource={sortedTransactions} columns={columns} className="table" />
+        <Table
+          dataSource={sortedTransactions}
+          columns={columns}
+          className="table"
+        />
       </div>
     </div>
   );

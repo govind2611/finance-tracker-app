@@ -37,3 +37,8 @@
     transform: rotate(360deg);
   }
 }
+@media screen and (max-width: 758px) {
+  .btn {
+    width: 65vw;
+  }
+}

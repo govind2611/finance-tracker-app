@@ -36,6 +36,7 @@ overflow-x: hidden;
   }
   .charts-wrappper {
     flex-wrap: wrap;
+    flex-direction: column;
     width: 75vw;
     margin: 10px;
   }
@@ -44,5 +45,13 @@ overflow-x: hidden;
   .pie-chart {
     width: 75vw;
     margin: 1.5rem;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .charts-wrappper {
+    margin: 10px;
+    width: 75vw;
+    flex-wrap: wrap;
+    flex-direction: column;
   }
 }

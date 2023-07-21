@@ -4,6 +4,9 @@
   justify-content: flex-start;
   align-items: start;
 }
+.test{
+  flex-direction: column;
+}
 .label-input {
   text-transform: capitalize;
   margin-bottom: 0.25rem;

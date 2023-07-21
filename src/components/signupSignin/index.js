@@ -140,7 +140,7 @@ const SignupSigninComponent = () => {
   return (
     <>
       {loginForm ? (
-        <div className="signup-wrapper">
+        <div className="signup-wrapper ">
           <h2 className="title">
             Login on <span style={{ color: "var(--theme" }}>Financely</span>
           </h2>
