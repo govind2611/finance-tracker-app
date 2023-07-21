@@ -1,7 +1,6 @@
 .input-wrapper {
   margin-bottom: 0.75rem;
   display: flex;
-  flex-direction: column;
   justify-content: flex-start;
   align-items: start;
 }

@@ -10,14 +10,15 @@
   margin-bottom: 1rem;
 }
 .input-flex {
-  width: 90% !important;
+  width: 70vw !important;
 }
 .select-input {
-  width: 30% !important;
+  width: 30vw !important;
 }
 .table-wrapper {
   display: flex;
   justify-content: space-between;
+
   align-items: center;
   width: 100%;
   margin-bottom: 1rem;
